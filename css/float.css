@@ -1,0 +1,94 @@
+@charset "utf-8";
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+
+
+.header, .main, .footer {
+  width: 1000px;
+  margin: 0 auto;
+}
+/*메인 콘텐츠 레이아웃 */
+.main{
+
+ /* 플로트로 인해 사라진 부모의 높이를 찾아줌 overflow: hidden; */ 
+
+  background: #ffff00;
+}
+
+
+.main::after{
+  content: "";
+  display: block;
+  clear: both;
+  background:grey;
+}
+
+.main > *{
+
+}
+.recommend-book {
+  width: 320px;
+  float: left;
+  margin-right: 20px;
+  background: orange;
+}
+
+.news {
+  width: 660px;
+  float: right;
+  background:gray;
+}
+.favorite-site{
+  width: 235px;
+float: right;
+margin-left: 20px;
+background: red;
+}
+
+.board {
+  width: 320px;
+float: left;
+background: lightsalmon;
+}
+
+.twitter {
+  background: skyblue;
+  width: 405px;
+  float: left;
+  margin-left: 20px;
+  background:lightgrey;
+}
+
+.footer{
+  background:lime;
+  
+ 
+}
+.box{
+  width: 400px;
+  background: yellow;
+  border: 5px solid red;
+  font-size: 20px;
+}
+
+.box1{
+  background: rgba(0, 255, 0, 0.2);
+  float: right;
+}
+.box3{
+  background: rgba(255, 0, 0, 0.5);
+  float: right;
+}
+.box4{
+  background:pink;
+  float: left;
+  width: 300px;
+
+}
+
+.box2{
+  background: rgba(0, 0, 255, 0.5);
+}
+
