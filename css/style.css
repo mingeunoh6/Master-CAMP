@@ -58,16 +58,44 @@ table {
 	border-spacing: 0;
 }
 
+/* 숨긴컨텐츠 */
+/* legend는 대부분 디자인/ 노출 하지 않는걸 추천 */
+/* display none은 접근성 측면에서 좋지 않다 */
+legend, .a11y{
+position: absolute;
+width: 1px;
+height: 1px;
+overflow: hidden; 
+margin: -1px;
+clip: rect(0,0,0,0);
+/* 숨기기 위해 영역을 지정하고 그 영역을 넘는 부분은 보이지 않게 해달라고 한것. 의도적으로 상자를 작게 만들어서 가려지게 만든다 */
+}
+
+/* clearfix - float 이슈를 해결하기 위한 클래스 모듈 */
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both; 
+  /* 형제가 잃어버린 높이만큰 높이를 가져줌 클리어 보스 */
+  /* 높이를 잃어버린 서치폼에게 가서 클리어 줘야함 */
+}
+
 /* 하이퍼링크 스타일 */
 a{
   color: inherit;
   text-decoration: none;
 }
+/* 본문스타일 */
+html {
+  font-size: 10px;
+}
 
 body{
+  font-size: 1.6rem;
   color: #181818;
   font-family: 'Noto Sans Regular', sans-serif;
 }
+
 
 /* 가상 요소를 활용한 그리드 설정 
 body::after {
@@ -91,19 +119,17 @@ body::after {
   width: 100%;
 }
 /* 공통 헤더 */
-.header {
-  background: lime;
 
-}
 
 
 /*공통 안내링크 */
-.member{
-  display: flex;
-  justify-content: flex-end;    
-  background:blue;
-}
 
+/* 공통 검색폼 */
+input[name="search"]{
+  border: 1px solid #aaaaaa;
+  border-radius: 3px;
+  padding: 5px 5px 5px 10px;
+}
 
 /* 공통 내비게이션 */
 .navigation {
@@ -142,8 +168,6 @@ body::after {
 }
 
 
-
-
 @media screen and (max-width: 999px){
   /* 모바일 그리드 설정 - 4col */
 .grid-show {
@@ -168,14 +192,77 @@ body::after {
 }
 
 
+/* 모바일 헤더 */
+.header {
+    background: #38302e;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* 모바일 로고 */
+.logo {
+    padding: 10px 0;
+  }
+.logo img{
+  display: block;
+}
+/* 모바일 멤버 */
+
+
+.member {
+  display: flex;
+justify-content: flex-end;
+  background: #988574;
+  margin: 0px -20px;
+  order: -1;
+  padding: 10px 20px;
+}
+
 .member a{
  color: #fff;
- margin-left: 1em;}
+ margin-left: 1em; 
+}
 
+
+ /* 모바일 검색폼 */
+
+ .search-form {
+   padding-bottom: 10px;
+ }
+ .search-form fieldset{
+   font-size: 0;
+ }
+ .search-form *{
+   font-size: 1.6rem;
+ }
  
+input[name="search"]{
+  width: calc(100% - 40px);
+  font-size: 1.6rem;
+}
+.btn-search{
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  padding: 0;
+  margin-left: 10px;
+  background: transparent;     
+}
+ .btn-search::after {
+  content: "";
+  cursor: pointer;
+  position: absolute;
+  left:0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  background: url("images/btn_search.png");
+  background-size: 100% 100%;
+}
 
-
-  /* 모바일 헤더 */
+}
 
   /* 모바일 내비게이션 */
 
@@ -188,7 +275,6 @@ body::after {
     align-content: center;
     flex-wrap: wrap; */
     
-  
   /*
   .main > *{  
   height: 10vh;
@@ -198,7 +284,6 @@ body::after {
   */
   
   /* 모바일 푸터 */
-}  
 
 @media screen and (min-width: 1000px) {
 /* 데스크탑 그리드 - 12 col */
@@ -224,65 +309,129 @@ body::after {
   .footer {
     width: 1000px;
     margin: 0 auto;
-   
+
   }
 
   /* 데스크탑 header */
+  /* .header {
+    display: grid;
+    grid-template-columns: repeat(12, 65px);
+    grid-template-rows: 50px 50px;
+    grid-column-gap: 20px;
+    align-items: center;
+  } */
+.header{
  
-  /* 데스크탑 안내링크 */
-.member{
-  position: relative; 
-  right: -0.5em;
-}
-.member li:nth-child(-n+2)::after{
-  content: "|";
-}
-.member a{
-  padding: 0 1em;
+  position: relative;
+
 }
 
-  /* 데스크탑 네비게이션 */
-  .nav-container {
+  /* 데스크탑 로고 */
+   .logo {
+     grid-column: 1 / span 3;
+     grid-row: 1 / span 2; 
+     position: absolute;
+     left: 0;
+     top: 50%;
+     margin-top: -30px;
+     
+   }
+  /* 데스크탑 안내링크 */
+.member{
+  /* grid-column: 9 / span 4; */
+  position: relative; 
+  right: -16px;
+ 
+  text-align: right;
+  font-size: 0;
+}
+.member li{
+  
+  font-size: 1.6rem;
+  
+  display: inline-block;
+  
+}
+.member li:nth-child(-n+2)::after{
+  content: "|"
+}
+
+.member a{
+  display: inline-block;
+  padding: 10px 1em;
+}
+
+/* 검색폼 */
+
+.search-form{
+  grid-column: 7 / span 6;
+  grid-row: 2;
+ 
+  justify-self: end;
+  padding: 10px 0;
+}
+.search-form fieldset{
+ 
+  float: right;
+}
+
+
+
+input[name="search"]{
+  width: 400px;
+}
+.btn-search{
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  background: #988564;
+  color: #FFF; 
+  padding: 5px 10px;
+}
+
+   /* 데스크탑 네비게이션 */
+   .nav-container {
     background: #988574;
   }
   .navigation {
     height: 10vh;
   }
 
- /* 데스크탑 메인 콘텐츠 */
- .main {
-  height: 70vh;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap; 
-}
+  /* 데스크탑 메인 콘텐츠 */
+  .main {
+    height: 70vh;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+  }
 
-.main > * {
-  /*flex 가로 그로우 쉬링크 */
-  flex: auto 0 1;
-}
-.recommand-book {
-  flex-basis: 320px;
-}
-.news {
-  flex-basis: 660px;
-}
-.board {
-  flex-basis: 320px;
-}
+  .main > * {
+    /*flex 가로 그로우 쉬링크 */
+    flex: auto 0 1;
+  }
+  .recommand-book {
+    flex-basis: 320px;
+  }
+  .news {
+    flex-basis: 660px;
+  }
+  .board {
+    flex-basis: 320px;
+  }
 
-.favorite-site {
-  flex-basis: 235px;
-}
-.twitter {
-  flex-basis: 405px;
-}
+  .favorite-site {
+    flex-basis: 235px;
+  }
+  
+  .twitter {
+    flex-basis: 405px;
+  }
+ 
+  /* 데스크탑 푸터 */
+  .footer-container {
+    background-color: #988574;
+  }
 
-/* 데스크탑 푸터 */
-.footer-container {
-  background-color: #988574;
-}
-.footer {
-  height: 10vh;
-}
+  .footer {
+    height: 10vh;
+  }
 }
