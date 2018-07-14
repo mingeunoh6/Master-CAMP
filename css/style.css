@@ -96,6 +96,15 @@ body::after {
 
 }
 
+
+/*공통 안내링크 */
+.member{
+  display: flex;
+  justify-content: flex-end;    
+  background:blue;
+}
+
+
 /* 공통 내비게이션 */
 .navigation {
   background: aqua;
@@ -159,14 +168,19 @@ body::after {
 }
 
 
+.member a{
+ color: #fff;
+ margin-left: 1em;}
+
+ 
+
+
   /* 모바일 헤더 */
 
   /* 모바일 내비게이션 */
 
   /* 모바일 메인 */
-  .main{
-    display: flex;
-    flex-direction: column;
+ 
   
     /*justify-content: flex-start;
     justify-content: space-evenly;
@@ -174,7 +188,7 @@ body::after {
     align-content: center;
     flex-wrap: wrap; */
     
-  }
+  
   /*
   .main > *{  
   height: 10vh;
@@ -214,9 +228,19 @@ body::after {
   }
 
   /* 데스크탑 header */
-  .header {
-   
-  }
+ 
+  /* 데스크탑 안내링크 */
+.member{
+  position: relative; 
+  right: -0.5em;
+}
+.member li:nth-child(-n+2)::after{
+  content: "|";
+}
+.member a{
+  padding: 0 1em;
+}
+
   /* 데스크탑 네비게이션 */
   .nav-container {
     background: #988574;
@@ -225,40 +249,40 @@ body::after {
     height: 10vh;
   }
 
-  /* 데스크탑 메인 콘텐츠 */
-  .main {
-    height: 70vh;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; 
-  }
+ /* 데스크탑 메인 콘텐츠 */
+ .main {
+  height: 70vh;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; 
+}
 
-  .main > * {
-    /*flex 가로 그로우 쉬링크 */
-    flex: auto 0 1;
-  }
-  .recommand-book {
-    flex-basis: 320px;
-  }
-  .news {
-    flex-basis: 660px;
-  }
-  .board {
-    flex-basis: 320px;
-  }
+.main > * {
+  /*flex 가로 그로우 쉬링크 */
+  flex: auto 0 1;
+}
+.recommand-book {
+  flex-basis: 320px;
+}
+.news {
+  flex-basis: 660px;
+}
+.board {
+  flex-basis: 320px;
+}
 
-  .favorite-site {
-    flex-basis: 235px;
-  }
-  .twitter {
-    flex-basis: 405px;
-  }
- 
-  /* 데스크탑 푸터 */
-  .footer-container {
-    background-color: #988574;
-  }
-  .footer {
-    height: 10vh;
-  }
+.favorite-site {
+  flex-basis: 235px;
+}
+.twitter {
+  flex-basis: 405px;
+}
+
+/* 데스크탑 푸터 */
+.footer-container {
+  background-color: #988574;
+}
+.footer {
+  height: 10vh;
+}
 }
