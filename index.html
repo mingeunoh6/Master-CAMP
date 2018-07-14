@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko-KR">
+<html lang="ko-KR" class="no-js">
 
 <head>
   <meta charset="UTF-8">
@@ -7,8 +7,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/style.css">
   <title>메인 - 웹카페</title>
+  <script src="js/modernizr-custom.js" defer></script>
   <script src="js/jquery.min.js" defer></script>
-  <script src="js/menu.js" defer></script>
+  <script src="js/menu.js" defer></script> 
 </head>
 <!-- 주석 -->
 
@@ -31,12 +32,12 @@
           <a href="#">커뮤니티</a>
         </li>
       </ul>
-      <form action="https://formspree.io/mingeunoh6@gmail.com" method="POST" class="search-form">
+      <form action="https://formspree.io/mingeunoh6@gmail.com" method="POST" class="search-form clearfix">
         <fieldset>
           <legend>검색 폼</legend>
-          <label for="search">검색어</label>
-          <input type="search" id="search" name="search">
-          <button type="submit" class="btn-search">검색</button>
+          <label for="search" class="a11y">검색어</label>
+          <input type="search" id="search" name="search"
+          ><button type="submit" class="btn-search">검색</button>
         </fieldset>
       </form>
     </header>
