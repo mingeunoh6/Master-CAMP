@@ -8,3 +8,9 @@ $(document).ready(function(){
   });
 });
 
+// 버튼을 클릭했을때 .btn-menu에 새로운 클래스르 만든다. //
+
+var btn = $('.btn-menu');
+btn.click(function(){
+  $(this).toggleClass('btn-menu-act')
+}); 
