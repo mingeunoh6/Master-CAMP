@@ -15,7 +15,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-.menu-item:focus{outline:2px solid red}
+
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -326,11 +326,24 @@ input[name="search"]{
   width: 70%;
   height: 100vh;
   padding: 20px;
+  transform: translateX(-100%);
+  transition: all 200ms;
+}
+.menu-item{
+  margin: 10px 0;
 }
 
+.sub-menu li{
+  margin: 10px 0 10px 20px ;
+}
+
+
+.menu-act{
+  transform: translateX(0) !important;
+}
 .sub-menu {
   display: none;
-  background: green;
+ 
 }
 
 .menu-item-act .sub-menu{
