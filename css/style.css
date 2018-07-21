@@ -15,6 +15,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+.menu-item:focus{outline:2px solid red}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -258,14 +259,14 @@ input[name="search"]{
   background-size: 100% 100%;
 }
 
-}
+
 
   /* 모바일 내비게이션 */
 
   /* 모바일 메인메뉴 제어 버튼 */
 
 .btn-menu{
-  background: yellow;
+  background:transparent;
   position: absolute;
   right: 20px;
   top: 70px;
@@ -273,13 +274,11 @@ input[name="search"]{
   height: 30px;
   border: 0;
   overflow: hidden;
+  cursor: pointer;
   
 }
 
-.btn-menu-act{
-  background: blue;
 
-}
 
 
 .menubar{
@@ -318,6 +317,26 @@ input[name="search"]{
  
  }
 /* 모바일 메인메뉴 */
+.menu{
+  background: #000;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 100vh;
+  padding: 20px;
+}
+
+.sub-menu {
+  display: none;
+  background: green;
+}
+
+.menu-item-act .sub-menu{
+  display: block !important;
+
+}
 
   /* 모바일 메인 */
  
@@ -337,6 +356,7 @@ input[name="search"]{
   */
   
   /* 모바일 푸터 */
+}
 
 @media screen and (min-width: 1000px) {
 /* 데스크탑 그리드 - 12 col */
