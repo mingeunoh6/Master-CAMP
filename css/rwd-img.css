@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+.rwd-img-container{
+  /* width값 안주는걸 추천함: 바깥 레이아웃에 따라 조정하기 위해 */
+  background: yellow;
+  text-align: center; 
+  /* 자식애들 가운데 처리 */
+}
+
+.rwd-img{
+  max-width: 100%;
+  height: auto; 
+}
+
