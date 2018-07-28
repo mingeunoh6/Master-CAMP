@@ -7,7 +7,9 @@
 //     }
 //   });
 // });
-
+$(window).resize(function () {
+  location.reload();
+ });
 
 var viewport = window.matchMedia('(max-width: 999px)');
 
@@ -25,7 +27,7 @@ var menu = $('.menu');
 btn.append(bar_top, bar_middle, bar_bottom);
 nav.prepend(btn);
 item.addClass('menu-item');
-item.attr('tapindex','0');    
+item.attr('tabindex','0');    
 text.addClass('icon-plus');
 
 btn.click(function(){
