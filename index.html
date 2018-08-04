@@ -9,7 +9,7 @@
   <title>메인 - 웹카페</title>
   <script src="js/modernizr-custom.js" defer></script>
   <script src="js/jquery.min.js" defer></script>
-  <script src="js/menu.js" defer></script> 
+  <script src="js/menu.js" defer></script>
 </head>
 <!-- 주석 -->
 
@@ -36,8 +36,8 @@
         <fieldset>
           <legend>검색 폼</legend>
           <label for="search" class="a11y">검색어</label>
-          <input type="search" id="search" name="search"
-          ><button type="submit" class="btn-search">검색</button>
+          <input type="search" id="search" name="search">
+          <button type="submit" class="btn-search">검색</button>
         </fieldset>
       </form>
     </header>
@@ -45,52 +45,67 @@
 
   <div class="nav-container">
     <nav class="navigation" aria-label="메인 메뉴">
-   
+
       <!-- <button class="btn-menu" aria-label="메인 메뉴 열기">
         <span class="menubar menubar-top"></span>
         <span class="menubar menubar-middle"></span>
         <span class="menubar menubar-bottom"></span>
       </button> -->
       <ul class="menu">
-          <li>
-            <span class="menu-item-text">HTML에 대해</span>
-        <ul class="sub-menu">
-          <li><a href="#"></a>HTLM5 소개</li>
-          <li><a href="#"></a>레퍼런스 소개</li>
-          <li><a href="#"></a>활용 에제</li>
-        </ul>
+        <li>
+          <span class="menu-item-text">HTML에 대해</span>
+          <ul class="sub-menu">
+            <li>
+              <a href="#"></a>HTLM5 소개</li>
+            <li>
+              <a href="#"></a>레퍼런스 소개</li>
+            <li>
+              <a href="#"></a>활용 에제</li>
+          </ul>
         </li>
         <li>
-            <span class="menu-item-text">CCS에 대해</span>
-        <ul class="sub-menu">
-          <li><a href="#"></a>CSS 소개</li>
-          <li><a href="#"></a>CSS2 VS CSS3</li>
-          <li><a href="#"></a>CSS 애니메이션</li>
-        </ul>
+          <span class="menu-item-text">CCS에 대해</span>
+          <ul class="sub-menu">
+            <li>
+              <a href="#"></a>CSS 소개</li>
+            <li>
+              <a href="#"></a>CSS2 VS CSS3</li>
+            <li>
+              <a href="#"></a>CSS 애니메이션</li>
+          </ul>
         </li>
         <li>
-            <span class="menu-item-text">웹표준성/웹접근성</span>
-        <ul class="sub-menu">
-          <li><a href="#"></a>웹표준이란?</li>
-          <li><a href="#"></a>웹접근성의 개요</li>
-          <li><a href="#"></a>HTML5의 현재와 미래</li>
-        </ul>
+          <span class="menu-item-text">웹표준성/웹접근성</span>
+          <ul class="sub-menu">
+            <li>
+              <a href="#"></a>웹표준이란?</li>
+            <li>
+              <a href="#"></a>웹접근성의 개요</li>
+            <li>
+              <a href="#"></a>HTML5의 현재와 미래</li>
+          </ul>
         </li>
         <li>
-            <span class="menu-item-text">묻고 답하기</span>
-        <ul class="sub-menu">
-          <li><a href="#"></a>묻고 답하기</li>
-          <li><a href="#"></a>FAQ</li>
-          <li><a href="#"></a>1대1 질문</li>
-        </ul>
+          <span class="menu-item-text">묻고 답하기</span>
+          <ul class="sub-menu">
+            <li>
+              <a href="#"></a>묻고 답하기</li>
+            <li>
+              <a href="#"></a>FAQ</li>
+            <li>
+              <a href="#"></a>1대1 질문</li>
+          </ul>
         </li>
         <li>
-            <span class="menu-item-text">자료실</span>
-        <ul class="sub-menu">
-          <li><a href="#"></a>공개 자료실</li>
-          <li><a href="#"></a>이미지 자료실</li>
-          <li><a href="#"></a>예제자료실</li>
-        </ul>
+          <span class="menu-item-text">자료실</span>
+          <ul class="sub-menu">
+            <li>
+              <a href="#"></a>공개 자료실</li>
+            <li>
+              <a href="#"></a>이미지 자료실</li>
+            <li>
+              <a href="#"></a>예제자료실</li>
+          </ul>
         </li>
       </ul>
     </nav>
@@ -99,10 +114,11 @@
   <div class="main-container">
     <main class="main">
       <section class="recommend-book">
-        <h2 class="recommend-book-heading section-heading">추천서적<span class="en-heading">recommend book</span></h2>
+        <h2 class="recommend-book-heading section-heading">추천서적
+          <span class="en-heading">recommend book</span>
+        </h2>
         <figure class="recommend-book-cover">
-          <img src="images/book_rwd.jpg" alt="" 
-          class="rwd-img" aria-describedby="recommend-book-caption">
+          <img src="images/book_rwd.jpg" alt="" class="rwd-img" aria-describedby="recommend-book-caption">
           <!-- aria-describedy 에 대체 텍스트가 들어있는 캡션의 아이디 값을 넣어주면 그걸 alt로 대신한다 -->
           <figcaption id="recommend-book-caption">반응형웹 핵심 가이드북 도서</figcaption>
         </figure>
@@ -115,93 +131,128 @@
         <p class="recommend-book-summary">반응형웹 디자인을 위한 핵심 내용을 다루고 있으며 미디어쿼리, 유연한 레이아웃, 반응형 이미지 기법을 학습할 수 있다. 모바일 및 다양한 해상도에 대응이 가능한 웹디자인을 이 책으로 시작해 보자!</p>
       </section>
       <section class="news">
-          <h2 class="news-heading section-heading">새소식<span class="en-heading">webcafe news</span></h2>
-          <figure class="news-container">
-            <video class="news-video rwd-video" poster="media/poster.jpg" autoplay controls muted>  
-                <source src="media/stories.mp4" type="video/mp4">
-                <track src="media/stories-en.vtt" kind="captions" srclang="en" label="English Caption">
-            </video>
-            <figcaption class="a11y">구글 개발자 이야기</figcaption>
+        <h2 class="news-heading section-heading">새소식
+          <span class="en-heading">webcafe news</span>
+        </h2>
+        <figure class="news-container">
+          <video class="news-video rwd-video" poster="media/poster.jpg" autoplay controls muted>
+            <source src="media/stories.mp4" type="video/mp4">
+            <track src="media/stories-en.vtt" kind="captions" srclang="en" label="English Caption">
+          </video>
+          <figcaption class="a11y">구글 개발자 이야기</figcaption>
         </figure>
         <!-- <div class="video-wrap rwd-iframe">
           <iframe width="560" height="315" src="https://www.youtube.com/embed/3_gdjD94xBI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div> -->
         <p class="news-summary">
-          구글플레이는 다양한 분야에서 활약하고 있는 국내 개발사들을 모시고 직접 이야기를 나눠보는 ‘구글플레이 개발자와의 대화’ 행사를 정기적으로 개최할 예정입니다. 오늘 3월 29일(수) 구글 캠퍼스 서울에서 열린 첫 번째 ‘구글플레이 개발자와의 대화’는 ‘해외에서 빵터진 한국 앱'을 주제로 진행됐는데요, 국내 앱 시장은 물론 글로벌 시장에서도 주목 받으며 글로벌 진출의 본보기가 되고 있는 개발사 세 곳과 함께 했습니다.
-      </p>
-      <time class="news-date icon-calendar" datetime="2018-04-02T14:37:23">
+          구글플레이는 다양한 분야에서 활약하고 있는 국내 개발사들을 모시고 직접 이야기를 나눠보는 ‘구글플레이 개발자와의 대화’ 행사를 정기적으로 개최할 예정입니다. 오늘 3월 29일(수) 구글 캠퍼스 서울에서 열린 첫 번째
+          ‘구글플레이 개발자와의 대화’는 ‘해외에서 빵터진 한국 앱'을 주제로 진행됐는데요, 국내 앱 시장은 물론 글로벌 시장에서도 주목 받으며 글로벌 진출의 본보기가 되고 있는 개발사 세 곳과 함께 했습니다.
+        </p>
+        <time class="news-date icon-calendar" datetime="2018-04-02T14:37:23">
           2018.08.04
-      </time>
+        </time>
       </section>
 
-      <section class="board"> <h2 class="board-heading section-heading"><span id="board">게시판</span><span class="en-heading">board</span></h2>
+      <section class="board">
+        <h2 class="board-heading section-heading">
+          <span id="board">게시판</span>
+          <span class="en-heading">board</span>
+        </h2>
         <ul class="board-list">
           <li class="icon-star">
-              <a href="#">HTML의 모든 것을 알려주마 샘플 활용법</a>
-              <time datetime="2018-04-04T12:34:12">2018.04.03</time>
+            <a href="#">HTML의 모든 것을 알려주마 샘플 활용법</a>
+            <time datetime="2018-04-04T12:34:12">2018.04.03</time>
           </li>
           <li class="icon-star">
-              <a href="#">W3C 사이트 리뉴얼 및 공지사항</a>
-              <time datetime="2018-04-04T12:34:12">2018.04.03</time>
+            <a href="#">W3C 사이트 리뉴얼 및 공지사항</a>
+            <time datetime="2018-04-04T12:34:12">2018.04.03</time>
           </li>
           <li class="icon-star">
-              <a href="#">KWCAG 2.1 소식</a>
-              <time datetime="2018-04-04T12:34:12">2018.04.03</time>
+            <a href="#">KWCAG 2.1 소식</a>
+            <time datetime="2018-04-04T12:34:12">2018.04.03</time>
           </li>
           <li class="icon-star">
-              <a href="#">서버 점검으로 인한 사이트 이용안내 입니다.</a>
-              <time datetime="2018-04-04T12:34:12">2018.04.03</time>
+            <a href="#">서버 점검으로 인한 사이트 이용안내 입니다.</a>
+            <time datetime="2018-04-04T12:34:12">2018.04.03</time>
           </li>
           <li class="icon-star">
-              <a href="#">여러분들이 생각하는 웹 접근성에 대해 이야기를 나누어 봅시다.</a>
-              <time datetime="2018-04-04T12:34:12">2018.04.03</time>
+            <a href="#">여러분들이 생각하는 웹 접근성에 대해 이야기를 나누어 봅시다.</a>
+            <time datetime="2018-04-04T12:34:12">2018.04.03</time>
           </li>
-      </ul>
-      <a href="#" class="board-more icon-plus" aria-labelledby="board">더보기</a>
+        </ul>
+        <a href="#" class="board-more icon-plus" aria-labelledby="board">더보기</a>
       </section>
-     
+
       <section class="favorite-site">
-          <h2 class="favorite-site-heading section-heading">인기사이트<span class="en-heading">favorite site</span></h2>
-          <ol class="favorite-site-list">
-            <li>
+        <h2 class="favorite-site-heading section-heading">인기사이트
+          <span class="en-heading">favorite site</span>
+        </h2>
+        <ol class="favorite-site-list">
+          <li>
             <a href="http://ko.learnlayout.com/" target="_blank">Learn CSS Layout</a>
-            </li>
-            <li>
+          </li>
+          <li>
             <a href="http://flexboxfroggy.com/" target="_blank">Flexbox Froggy</a>
-            </li>
-            <li>
+          </li>
+          <li>
             <a href="http://cssgridgarden.com/" target="_blank">CSS Grid Garden</a>
-            </li>
-            <li>
+          </li>
+          <li>
             <a href="https://developer.mozilla.org/ko/" target="_blank">MDN Web Docs</a>
-            </li>
+          </li>
         </ol>
-        </section>
+      </section>
       <section class="twitter">
-          <h2 class="twitter-heading section-heading">트위터<span class="en-heading">twitter</span></h2>
-          <div class="twitter-wrap">
+        <h2 class="twitter-heading section-heading">트위터
+          <span class="en-heading">twitter</span>
+        </h2>
+        <div class="twitter-wrap">
           <dl class="twitter-user-info">
-          <dt class="a11y">사용자 이름</dt>
-          <dd class="twitter-user-name">김데레사</dd>
-          <dt class="a11y">사용자 아이디</dt>
-          <dd class="twitter-user-id">
-          <a href="http://twitter.com/seulbinim">@seulbinim</a>
-          </dd>
+            <dt class="a11y">사용자 이름</dt>
+            <dd class="twitter-user-name">김데레사</dd>
+            <dt class="a11y">사용자 아이디</dt>
+            <dd class="twitter-user-id">
+              <a href="http://twitter.com/seulbinim">@seulbinim</a>
+            </dd>
           </dl>
           <figure class="twitter-profile">
-          <img src="images/seulbinim.jpg" alt="" class="twitter-thumbnail rwd-img">
-          <figcaption class="a11y">사용자 프로필</figcaption>
+            <img src="images/seulbinim.jpg" alt="" class="twitter-thumbnail rwd-img">
+            <figcaption class="a11y">사용자 프로필</figcaption>
           </figure>
           <p class="twitter-summary">
-          웹표준 핵심 가이드북 개정판 출시 기념으로 세미나를 준비했습니다. 참석을 원하시는 분들은 트위터로 문의하시기 바랍니다.
-          </p></div>
+            웹표준 핵심 가이드북 개정판 출시 기념으로 세미나를 준비했습니다. 참석을 원하시는 분들은 트위터로 문의하시기 바랍니다.
+          </p>
+        </div>
         <time class="twitter-date icon-calendar" datetime="2018-04-03T16:09:28">2018.04.03</time>
       </section>
     </main>
   </div>
 
+  <article class="slogan">
+      <h2 class="slogan-heading" title="웹카페에서 웹표준을">
+          슬로건
+      </h2>
+      <p class="slogan-content">
+          <q cite="http://w3.org/WAI">The power of the Web is in its universality, Access by everyone regardless of disability is an essential aspect.</q>
+          Tim Berners - Lee , W3C Director and inventor of the World Wide Web
+      </p>
+      <footer class="a11y">
+          출처 : W3C - Web Accessibility Initiative 
+      </footer>
+  </article>
+
+
   <div class="footer-container">
-    <footer class="footer">푸터</footer>
+    <footer class="footer">
+        <address class="address">
+            <span>서울 성동구 성수이로 113 제강빌딩 8층</span>
+            <span>전화: <a href="tel:025019396">02-501-9396</a></span>
+            <span>이메일: <a href="mailto:seulbinim@gmail.com?subject=문의사항">seulbinim@gmail.com</a></span>
+        </address>
+        <small class="copyright">
+            Copyright since &copy; 2010 by Web Cafe CORPORATION ALL RIGHTS RESERVED.
+        </small>
+    </footer>
   </div>
   <div class="grid">
     <div class="grid-unit"></div>
