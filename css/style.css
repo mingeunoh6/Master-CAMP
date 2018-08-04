@@ -304,7 +304,7 @@ display: inline;
  
   overflow: hidden;
   margin-top:20px;
-  counter-reset: 0;
+  counter-reset: number;
   /* 부모는 0으로 초기화 */
 }
 
