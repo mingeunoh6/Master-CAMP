@@ -331,14 +331,14 @@ display: inline;
 
 .twitter-wrap{
   position: relative;
-  background: lime;
+  
   padding-right: 25%;
   
 }
 
 .twitter-user-info{
   margin-top: 20px;
-  background: orange;
+  
 }
 .twitter-user-name, .twitter-user-id{
   display: inline;
@@ -376,8 +376,15 @@ display: inline;
 
 /* 공통 푸터 */
 .footer {
-  background: red;
+  background-color: #988574;
+  padding: 15px 20px;
+  color: white;
 
+
+}
+
+.address{
+  margin-bottom: 15px;
 }
 
 
@@ -575,7 +582,7 @@ input[name="search"]{
  .main {
    display: flex;
    flex-direction: column;
-   padding: 0 20px;
+   padding: 10px;
  }
 
  /* 모바일 추천 서적 */
@@ -584,9 +591,7 @@ input[name="search"]{
    
  }
   
- .twitter-wrap{
-
- }
+ 
   
     /*justify-content: flex-start;
     justify-content: space-evenly;
@@ -603,7 +608,36 @@ input[name="search"]{
   */
   
   /* 모바일 푸터 */
+
+.address span{
+  display: block;
 }
+
+
+  /* 모바일 슬로건 */
+  .slogan{
+    display: none;
+  }
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (min-width: 1000px) {
 /* 데스크탑 그리드 - 12 col */
@@ -632,6 +666,7 @@ body {
   .header,
   .navigation,
   .main,
+  .slogan,
   .footer {
     width: 1000px;
     margin: 0 auto;
@@ -716,7 +751,7 @@ input[name="search"]{
 
    /* 데스크탑 네비게이션 */
    .nav-container {
-    
+    background-color: #988574;
    
     box-shadow: 0px -2px 5px 0px rgba(0,0,0,0.85),  0px 2px 5px 0px rgba(0,0,0,0.85);
   }
@@ -765,29 +800,78 @@ input[name="search"]{
   }
    
 
-
+/* 데스크탑 새소식 */
   .news {
     flex-basis: 660px;
   }
+  /* 데스크탑 게시판 */
   .board {
     width: 320px;
   }
-
+/* 데스크탑 인기사이트 */
   .favorite-site {
     flex-basis: 235px;
     order: 1;
   }
+.twitter{
+  flex-basis: 405px;
+}
+  
   
   .twitter-wrap {
+
     min-height: 100px;
   }
  
+/* 데스크탑 슬로건 */
+.slogan{
+  
+  position: relative;
+}
+.slogan-heading{
+  position: absolute;
+  width: 110px;
+  height: 83px;
+  
+  bottom:-25px;
+  left: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slogan-heading::after{
+  content:"";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url("images/coffee.png") no-repeat;
+}
+
+.slogan-content{
+  padding: 10px 50px 10px 170px;
+}
+
+.slogan-content q{
+  font-weight: 700;
+}
+
+.slogan-content q::before{
+  content:'“';
+  font-size: 3rem;
+  position: relative;
+  top: 5px;
+}
+
   /* 데스크탑 푸터 */
   .footer-container {
     background-color: #988574;
   }
 
   .footer {
+    text-align: center;
     
   }
 }
