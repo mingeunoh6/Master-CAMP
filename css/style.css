@@ -46,6 +46,7 @@ footer, header, hgroup, main, menu, nav, section {
 ul {
 	list-style: none;
 }
+
 blockquote, q {
 	quotes: none;
 }
@@ -203,6 +204,11 @@ input[name="search"]{
 
 
 /* 공통 메인 섹션 문단 */
+/* 공통 메인 */
+.menu > section{
+  margin-top:20px;
+}
+
 /* 속성 선택자 > .main 안에 서머리로 끝나는 클래스 다 적용됨 */
 .main [class$="-summary"]{
 line-height: 1.5;
@@ -246,10 +252,7 @@ display: inline;
   color: #ABD375;
 }
 
-.recommend-book-summary{
-  background:pink;
-  /* text-align: justify; */
-  }
+
 
 /* 공통 새소식 */
 .news-container{
@@ -261,18 +264,115 @@ display: inline;
   text-align: right;
   margin-top: 10px;
 }
+/* 공통게시판 */
 
 .board{
-  background: skyblue;
+  position: relative;
+}
+.board-list{
+  margin-top: 20px;
+}
+.board-list li{
+ 
+  display: flex;
+  justify-content: space-between;
 }
 
-.favorite-site{
-  background: teal;
-}
-.twitter{
-  background: tomato;
+.board-list a{
+
+  width: calc(100% - 110px);
+  white-space: nowrap;
+  /* 플레스베이시스랑 만날을때 와이드값을 늘려버림 그래서 주의 */
+  overflow: hidden; 
+
+  text-overflow: ellipsis;
+  /* white-space는 블록에서만 쓰임 */
 }
 
+.board-more::before{
+  color: hsla(100, 50%, 60%, 1);
+}
+
+.board-more{
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+
+/* 공통 인기사이트 */
+.favorite-site-list{
+ 
+  overflow: hidden;
+  margin-top:20px;
+  counter-reset: 0;
+  /* 부모는 0으로 초기화 */
+}
+
+.favorite-site-list li{
+  counter-increment: number;
+  margin-top: 10px;
+  /* 임마는 증가하는 요소다 라고 선언 */
+}
+
+.favorite-site-list li:before{
+  content: counter(number, decimal);
+  background-color: #EEA60A;
+  color: white;
+  padding: 0 0.5em;
+  margin-right: 0.5em;
+  border-radius: 50%;
+  /* 증가하는거 십진수로 표기해라 라는 명령 */
+}
+
+
+/* 공통트위터 */
+
+
+
+.twitter-wrap{
+  position: relative;
+  background: lime;
+  padding-right: 25%;
+  
+}
+
+.twitter-user-info{
+  margin-top: 20px;
+  background: orange;
+}
+.twitter-user-name, .twitter-user-id{
+  display: inline;
+}
+
+.twitter-user-id{
+  font-weight: 700;
+}
+
+.twitter-user-name{
+  color: #6AAEE6;
+}
+
+.twitter-profile{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 25%;
+  padding-left: 1em;
+}
+
+.twitter-thumbnail{
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.twitter-summary{
+  margin: 10px 0px;
+}
+.twitter-date{
+  display: block;
+  text-align: right;
+}
 
 /* 공통 푸터 */
 .footer {
@@ -475,6 +575,7 @@ input[name="search"]{
  .main {
    display: flex;
    flex-direction: column;
+   padding: 0 20px;
  }
 
  /* 모바일 추천 서적 */
@@ -483,6 +584,9 @@ input[name="search"]{
    
  }
   
+ .twitter-wrap{
+
+ }
   
     /*justify-content: flex-start;
     justify-content: space-evenly;
@@ -612,7 +716,7 @@ input[name="search"]{
 
    /* 데스크탑 네비게이션 */
    .nav-container {
-    background-color: #988574;
+    
    
     box-shadow: 0px -2px 5px 0px rgba(0,0,0,0.85),  0px 2px 5px 0px rgba(0,0,0,0.85);
   }
@@ -661,19 +765,21 @@ input[name="search"]{
   }
    
 
+
   .news {
     flex-basis: 660px;
   }
   .board {
-    flex-basis: 320px;
+    width: 320px;
   }
 
   .favorite-site {
     flex-basis: 235px;
+    order: 1;
   }
   
-  .twitter {
-    flex-basis: 405px;
+  .twitter-wrap {
+    min-height: 100px;
   }
  
   /* 데스크탑 푸터 */
